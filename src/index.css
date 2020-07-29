@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500");
+
+body {
+  overflow-x: hidden;
+  /* font-family: "Roboto", sans-serif; */
+  font-size: 16px;
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* Toggle Styles */
+
+#viewport {
+  /* padding-left: 300px; */
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+.header {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  background: linear-gradient(#ffffff, #b2beb5);
+}
+.header.padding__bottom {
+  padding: 8px 6px 28px;
+}
+
+.header h3 {
+  color: red;
+  text-align: center;
+  margin: 0;
+  font-size: 1.5rem;
+}
+p.active {
+  font-weight: bold;
+  color: #4c4c4c;
+  border-bottom: 2px solid #333;
+}
+.idare__logo {
+  padding: 10px 0;
+}
+
+.navbar-right {
+  float: right !important;
+  margin-right: -15px;
+  width: 20%;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+
+.text {
+  display: inline-block;
+  width: 80%;
+  text-align: center;
+}
+
+.button_3d {
+  width: 55px;
+  font-size: 11px;
+  text-align: center;
+  cursor: pointer;
+  height: 55px;
+  color: red;
+}
+
+.button_3d p {
+  margin-bottom: 0px;
+}
+/* .header h3 {
+  color: #5bc9c5;
+  font-size: 1.3rem;
+  padding: 0px 0;
+  text-align: center;
+} */
+.tripple__buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.btns {
+  color: #ffff;
+  text-align: center;
+  padding: 0 2px;
+  cursor: pointer;
+}
+iframe {
+  height: 100vh;
+  width: 100%;
+}
+.tab_btns {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+p.tab_btn {
+  border: 1px solid #666;
+  padding: 0px 4px;
+}
+/* p.tab_btn_top {
+  border: 1px solid #ffffff;
+  padding: 0px 4px;
+  background: black;
+  border-left-color: #ffffff;
+  border-right-color: #ffffff;
+  border-bottom: none;
+} */
+p.tab_btn:first-child {
+  border-right: none;
+}
+p.active.tab_btn {
+  font-weight: 400;
+  border-bottom: 2px solid #333;
+}
+/* p.active.tab_btn_top {
+  border-bottom: 2px solid #55ff00;
+}
+p.active.tab_btn_top {
+  border-top: 2px solid #55ff00;
+} */
+.a21__logo {
+  display: flex;
+}
+.ser_buttons {
+  padding: 2px;
+}

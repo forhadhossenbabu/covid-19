@@ -7,22 +7,29 @@ class Frame extends Component {
     iframe.addEventListener("load", this.props.onLoad);
   }
 
+  
+
   render() {
     const iframeStyle = {
       width: "100%",
       height: "800px",
       border: "none",
+      overflow: "hidden",
     };
 
     return (
       <iframe
         ref="iframe"
         {...this.props}
-        frameBorder={"0"}
-        width={"100%"}
-        height={"800px"}
         style={iframeStyle}
         title="title"
+        sandbox="allow-same-origin allow-scripts allow-forms"
+        marginHeight="1"
+        marginWidth="1"
+        name="cboxmain"
+        frameBorder="0"
+        allowTransparency="true"
+        scrolling="no"
       />
     );
   }

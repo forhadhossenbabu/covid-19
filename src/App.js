@@ -6,8 +6,13 @@ import IFrame from "./components/iFrame";
 
 class App extends React.Component {
   state = {
-    iFrameURL:
-      "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7db57689adab43b7ba5211349739aeba&autoplay",
+    iFrameURL: [
+      {
+        title: null,
+        src:
+          "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7db57689adab43b7ba5211349739aeba&autoplay",
+      },
+    ],
     active: "Summary",
     cls: null,
   };

@@ -21,7 +21,13 @@ const Header = ({ updateURL, active, cls }) => (
         className="button_3d"
         onClick={() =>
           updateURL(
-            "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7db57689adab43b7ba5211349739aeba",
+            [
+              {
+                title: null,
+                src:
+                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7db57689adab43b7ba5211349739aeba&autoplay",
+              },
+            ],
             "Summary"
           )
         }
@@ -37,7 +43,13 @@ const Header = ({ updateURL, active, cls }) => (
           height="40px"
           onClick={() =>
             updateURL(
-              "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5",
+              [
+                {
+                  title: null,
+                  src:
+                    "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5&autoplay",
+                },
+              ],
               "Health",
               "General"
             )
@@ -48,7 +60,13 @@ const Header = ({ updateURL, active, cls }) => (
           className={active === "Health" ? "active tab_btn_top" : "tab_btn_top"}
           onClick={() =>
             updateURL(
-              "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5",
+              [
+                {
+                  title: null,
+                  src:
+                    "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5&autoplay",
+                },
+              ],
               "Health",
               "General"
             )
@@ -62,7 +80,13 @@ const Header = ({ updateURL, active, cls }) => (
               className={cls === "General" ? "active tab_btn" : "tab_btn"}
               onClick={() =>
                 updateURL(
-                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5",
+                  [
+                    {
+                      title: null,
+                      src:
+                        "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5",
+                    },
+                  ],
                   "Health",
                   "General"
                 )
@@ -72,27 +96,91 @@ const Header = ({ updateURL, active, cls }) => (
             </p>
             <p
               className={
-                cls === "Covid Management" ? "active tab_btn" : "tab_btn"
+                cls === "Call Center Data Insights"
+                  ? "active tab_btn"
+                  : "tab_btn"
               }
               onClick={() =>
                 updateURL(
                   [
-                    "https://moru.maps.arcgis.com/apps/opsdashboard/index.html#/3c97333998e74a57b944165c9a6369e0",
-                    "https://mahmud-ayesha.shinyapps.io/COVID-BD/",
-                    "http://dev.pipilika.com:9899/",
+                    {
+                      title: "333 Callers",
+                      src:
+                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/21a67c9552b84337bc5ff3d7055a5c4f",
+                    },
+                    {
+                      title: "16263 callers",
+                      src:
+                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/0c9652cd502e4e41bd770686e666d9ed",
+                    },
+                    {
+                      title: "Community Developed Applications Callers",
+                      src:
+                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/e46cbee4e2bb4ffab75b8f335ed9eb73",
+                    },
+                    {
+                      title: "Human Verified Callers Insight",
+                      src:
+                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/2677c8ad88d64b5b8ace05230cb48ddc",
+                    },
+                    {
+                      title: "Uber Doctor Verified",
+                      src:
+                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/230710c7cdb54fc4b2cc1a1fbf782153",
+                    },
+                    {
+                      title: "Web App and Mobile App Callers",
+                      src:
+                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/bb6ef50fe5bd4b3abfcea19f4c11e7ae",
+                    },
                   ],
                   "Health",
-                  "Covid Management"
+                  "Call Center Data Insights"
                 )
               }
             >
-              Covid Management
+              Call Center Data Insights
+            </p>
+            <p
+              className={
+                cls === "Data Analytics" ? "active tab_btn" : "tab_btn"
+              }
+              onClick={() =>
+                updateURL(
+                  [
+                    {
+                      title: null,
+                      src:
+                        "https://moru.maps.arcgis.com/apps/opsdashboard/index.html#/0ad20c9de93d4df89270b2187bdc5858",
+                    },
+                    {
+                      title: null,
+                      src:
+                        "https://moru.maps.arcgis.com/apps/opsdashboard/index.html#/c2d6cbc483eb43e4bcfeb944539fb7eb",
+                    },
+                    {
+                      title: "Covid-19 predictions",
+                      src:
+                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/99d68bce9ab441139aa0a67f6c8cef93",
+                    },
+                  ],
+                  "Health",
+                  "Data Analytics"
+                )
+              }
+            >
+              Data Analytics
             </p>
             <p
               className={cls === "Non-Covid" ? "active tab_btn" : "tab_btn"}
               onClick={() =>
                 updateURL(
-                  "https://a2i.idare.io/dengue/dghs",
+                  [
+                    {
+                      title: null,
+                      src: "https://a2i.idare.io/dengue/dghs",
+                    },
+                  ],
                   "Health",
                   "Non-Covid"
                 )
@@ -107,7 +195,13 @@ const Header = ({ updateURL, active, cls }) => (
         className="button_3d"
         onClick={() =>
           updateURL(
-            "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=f74d6d4f81734fb2a4f36f8fb7ae250c",
+            [
+              {
+                title: null,
+                src:
+                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=f74d6d4f81734fb2a4f36f8fb7ae250c",
+              },
+            ],
             "Education"
           )
         }
@@ -118,7 +212,17 @@ const Header = ({ updateURL, active, cls }) => (
       </div>
       <div
         className="button_3d"
-        onClick={() => updateURL("https://arcg.is/1O5Hy10", "economy")}
+        onClick={() =>
+          updateURL(
+            [
+              {
+                title: null,
+                src: "https://arcg.is/1O5Hy10",
+              },
+            ],
+            "economy"
+          )
+        }
       >
         <img alt="economy" src={require("./icons/eco.png")} height="40px" />{" "}
         <br />
@@ -128,7 +232,13 @@ const Header = ({ updateURL, active, cls }) => (
         className="button_3d"
         onClick={() =>
           updateURL(
-            "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=587f7029581c47a78e9e3ebb0855946c",
+            [
+              {
+                title: null,
+                src:
+                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=587f7029581c47a78e9e3ebb0855946c",
+              },
+            ],
             "SSN"
           )
         }
@@ -144,7 +254,12 @@ const Header = ({ updateURL, active, cls }) => (
 
       <div
         className="button_3d"
-        onClick={() => updateURL("https://arcg.is/zOHqH", "Law & Order")}
+        onClick={() =>
+          updateURL(
+            [{ title: null, src: "https://arcg.is/zOHqH" }],
+            "Law & Order"
+          )
+        }
       >
         <img alt="Law & Order" src={require("./icons/law.png")} height="40px" />{" "}
         <br />
@@ -159,9 +274,13 @@ const Header = ({ updateURL, active, cls }) => (
         <div
           className="btns"
           onClick={() =>
-            updateURL(
-              "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=555d4957c14f4d08b151e72fd51ede5a"
-            )
+            updateURL([
+              {
+                title: "No Poverty",
+                src:
+                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=555d4957c14f4d08b151e72fd51ede5a",
+              },
+            ])
           }
         >
           <img
@@ -173,9 +292,13 @@ const Header = ({ updateURL, active, cls }) => (
         <div
           className="btns"
           onClick={() =>
-            updateURL(
-              "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7faeb6e37bc94ca09629071f117e8723"
-            )
+            updateURL([
+              {
+                title: "Zero Hunger",
+                src:
+                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7faeb6e37bc94ca09629071f117e8723",
+              },
+            ])
           }
         >
           <img
@@ -187,9 +310,13 @@ const Header = ({ updateURL, active, cls }) => (
         <div
           className="btns"
           onClick={() =>
-            updateURL(
-              "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=1bcc767347bf4bc4a0ac0d7afa9263ab"
-            )
+            updateURL([
+              {
+                title: "Good Health and Well Being",
+                src:
+                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=1bcc767347bf4bc4a0ac0d7afa9263ab",
+              },
+            ])
           }
         >
           <img
@@ -201,13 +328,17 @@ const Header = ({ updateURL, active, cls }) => (
         <div
           className="btns"
           onClick={() =>
-            updateURL(
-              "https://idare.maps.arcgis.com/apps/MapJournal/index.html?appid=4bd179f9963c498ea5a743d61d26c858"
-            )
+            updateURL([
+              {
+                title: "Quality Education",
+                src:
+                  "https://idare.maps.arcgis.com/apps/MapJournal/index.html?appid=4bd179f9963c498ea5a743d61d26c858",
+              },
+            ])
           }
         >
           <img
-            alt="Quality Education"
+            alt="Gender Equality"
             src={require("./icons/bottoms/9.png")}
             height="48px"
           />
@@ -215,9 +346,13 @@ const Header = ({ updateURL, active, cls }) => (
         <div
           className="btns"
           onClick={() =>
-            updateURL(
-              "https://idare.maps.arcgis.com/apps/MapJournal/index.html?appid=1d774b51321345699634ccdd412b15c5"
-            )
+            updateURL([
+              {
+                title: "Gender Equality",
+                src:
+                  "https://idare.maps.arcgis.com/apps/MapJournal/index.html?appid=1d774b51321345699634ccdd412b15c5",
+              },
+            ])
           }
         >
           <img
@@ -228,7 +363,14 @@ const Header = ({ updateURL, active, cls }) => (
         </div>
         <div
           className="btns"
-          onClick={() => updateURL("Decent Work And Econimic Groth")}
+          onClick={() =>
+            updateURL([
+              {
+                title: "Decent Work And Econimic Groth",
+                src: null,
+              },
+            ])
+          }
         >
           <img
             alt="Decent Work And Econimic Groth"
@@ -238,7 +380,14 @@ const Header = ({ updateURL, active, cls }) => (
         </div>
         <div
           className="btns"
-          onClick={() => updateURL("Reduced IME Qualities")}
+          onClick={() =>
+            updateURL([
+              {
+                title: "Reduced IME Qualities",
+                src: null,
+              },
+            ])
+          }
         >
           <img
             alt="Reduced IME Qualities"
@@ -248,7 +397,14 @@ const Header = ({ updateURL, active, cls }) => (
         </div>
         <div
           className="btns"
-          onClick={() => updateURL("Peace, Justice And Strong Institutions")}
+          onClick={() =>
+            updateURL([
+              {
+                title: "Peace, Justice And Strong Institutions",
+                src: null,
+              },
+            ])
+          }
         >
           <img
             alt="economy"

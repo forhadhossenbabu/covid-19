@@ -6,6 +6,11 @@ body {
   font-size: 16px;
   font-family: "Rajdhani", sans-serif;
 }
+html,
+body,
+iframe {
+  height: 100%;
+}
 
 /* Toggle Styles */
 
@@ -97,9 +102,9 @@ iframe {
 }
 .tab_btns {
   display: flex;
-  width: 200px;
-  justify-content: center;
-  margin-left: 10px;
+  width: 400px;
+  justify-content: left;
+  margin-left: -35px;
   margin-top: 4px;
 }
 p.tab_btn {
@@ -132,4 +137,11 @@ p.active.tab_btn_top {
 }
 .ser_buttons {
   padding: 2px;
+}
+.iframe_header {
+  margin: 0;
+  text-align: center;
+  color: #fddf33;
+  background: #e93f33;
+  padding: 5px 0;
 }

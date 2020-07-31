@@ -10,7 +10,7 @@ class App extends React.Component {
       {
         title: null,
         src:
-          "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7db57689adab43b7ba5211349739aeba&autoplay",
+          "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7db57689adab43b7ba5211349739aeba",
       },
     ],
     active: "Summary",

@@ -7,8 +7,6 @@ class Frame extends Component {
     iframe.addEventListener("load", this.props.onLoad);
   }
 
-  
-
   render() {
     const iframeStyle = {
       width: "100%",
@@ -21,15 +19,10 @@ class Frame extends Component {
       <iframe
         ref="iframe"
         {...this.props}
-        style={iframeStyle}
-        title="title"
-        sandbox="allow-same-origin allow-scripts allow-forms"
-        marginHeight="1"
-        marginWidth="1"
-        name="cboxmain"
-        frameBorder="0"
-        allowTransparency="true"
-        scrolling="no"
+        frameborder="0"
+        scrolling="yes"
+        width="100%"
+        height="800px"
       />
     );
   }

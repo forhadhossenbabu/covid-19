@@ -1,5 +1,39 @@
 import React from "react";
 
+let callCenterDataInsights = [
+  {
+    title: "333 Callers",
+    src:
+      "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/21a67c9552b84337bc5ff3d7055a5c4f",
+  },
+  {
+    title: "16263 callers",
+    src:
+      "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/0c9652cd502e4e41bd770686e666d9ed",
+  },
+
+  {
+    title: "Community Developed Applications Callers",
+    src:
+      "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/e46cbee4e2bb4ffab75b8f335ed9eb73",
+  },
+  {
+    title: "Human Verified Callers Insight",
+    src:
+      "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/2677c8ad88d64b5b8ace05230cb48ddc",
+  },
+  {
+    title: "Uber Doctor Verified",
+    src:
+      "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/230710c7cdb54fc4b2cc1a1fbf782153",
+  },
+  {
+    title: "Web App and Mobile App Callers",
+    src:
+      "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/bb6ef50fe5bd4b3abfcea19f4c11e7ae",
+  },
+];
+
 const Header = ({ updateURL, active, cls }) => (
   <div className={active === "Health" ? `header padding__bottom` : `header`}>
     <div className="a21__logo">
@@ -25,7 +59,7 @@ const Header = ({ updateURL, active, cls }) => (
               {
                 title: null,
                 src:
-                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7db57689adab43b7ba5211349739aeba&autoplay",
+                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=7db57689adab43b7ba5211349739aeba",
               },
             ],
             "Summary"
@@ -47,7 +81,7 @@ const Header = ({ updateURL, active, cls }) => (
                 {
                   title: null,
                   src:
-                    "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5&autoplay",
+                    "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5",
                 },
               ],
               "Health",
@@ -64,7 +98,7 @@ const Header = ({ updateURL, active, cls }) => (
                 {
                   title: null,
                   src:
-                    "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5&autoplay",
+                    "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=e6450fbf28f840b990c892c392166da5",
                 },
               ],
               "Health",
@@ -94,7 +128,33 @@ const Header = ({ updateURL, active, cls }) => (
             >
               General
             </p>
-            <p
+            <div
+              class={
+                cls === "Call Center Data Insights"
+                  ? "active dropdown"
+                  : "dropdown"
+              }
+            >
+              <button class="dropbtn">Call Center Data Insights</button>
+              <div class="dropdown-content">
+                {callCenterDataInsights.map((item) => (
+                  <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      updateURL(
+                        [{ title: null, src: item.src }],
+                        "Health",
+                        "Call Center Data Insights"
+                      );
+                    }}
+                    href="!#"
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+            {/* <p
               className={
                 cls === "Call Center Data Insights"
                   ? "active tab_btn"
@@ -104,32 +164,33 @@ const Header = ({ updateURL, active, cls }) => (
                 updateURL(
                   [
                     {
-                      title: "333 Callers",
-                      src:
-                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/21a67c9552b84337bc5ff3d7055a5c4f",
-                    },
-                    {
-                      title: "16263 callers",
+                      title: "A",
                       src:
                         "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/0c9652cd502e4e41bd770686e666d9ed",
                     },
                     {
-                      title: "Community Developed Applications Callers",
+                      title: "A",
+                      src:
+                        "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/21a67c9552b84337bc5ff3d7055a5c4f",
+                    },
+
+                    {
+                      title: "A",
                       src:
                         "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/e46cbee4e2bb4ffab75b8f335ed9eb73",
                     },
                     {
-                      title: "Human Verified Callers Insight",
+                      title: "A",
                       src:
                         "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/2677c8ad88d64b5b8ace05230cb48ddc",
                     },
                     {
-                      title: "Uber Doctor Verified",
+                      title: "A",
                       src:
                         "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/230710c7cdb54fc4b2cc1a1fbf782153",
                     },
                     {
-                      title: "Web App and Mobile App Callers",
+                      title: "A",
                       src:
                         "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/bb6ef50fe5bd4b3abfcea19f4c11e7ae",
                     },
@@ -140,7 +201,7 @@ const Header = ({ updateURL, active, cls }) => (
               }
             >
               Call Center Data Insights
-            </p>
+            </p> */}
             <p
               className={
                 cls === "Data Analytics" ? "active tab_btn" : "tab_btn"
@@ -159,7 +220,7 @@ const Header = ({ updateURL, active, cls }) => (
                         "https://moru.maps.arcgis.com/apps/opsdashboard/index.html#/c2d6cbc483eb43e4bcfeb944539fb7eb",
                     },
                     {
-                      title: "Covid-19 predictions",
+                      title: null,
                       src:
                         "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/99d68bce9ab441139aa0a67f6c8cef93",
                     },
@@ -199,7 +260,7 @@ const Header = ({ updateURL, active, cls }) => (
               {
                 title: null,
                 src:
-                  "https://idare.maps.arcgis.com/apps/Cascade/index.html?appid=f74d6d4f81734fb2a4f36f8fb7ae250c",
+                  "https://idare.maps.arcgis.com/apps/opsdashboard/index.html#/745b32b825f34713b420971de7651df2",
               },
             ],
             "Education"

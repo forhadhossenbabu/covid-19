@@ -32,22 +32,22 @@ iframe {
   display: flex;
   padding: 8px;
   justify-content: space-between;
-  background: linear-gradient(#ffffff, #b2beb5);
+  background: linear-gradient(#1d2020, #1e5056);
 }
 .header.padding__bottom {
   padding: 8px 6px 28px;
 }
 
 .header h3 {
-  color: red;
+  color: #ffff;
   text-align: center;
   margin: 0;
   font-size: 1.5rem;
 }
 p.active {
   font-weight: bold;
-  color: #4c4c4c;
-  border-bottom: 2px solid #333;
+  color: #5ec9c5;
+  border-bottom: 2px solid #5ec9c5;
 }
 .idare__logo {
   padding: 10px 0;
@@ -74,7 +74,7 @@ p.active {
   text-align: center;
   cursor: pointer;
   height: 55px;
-  color: red;
+  color: #ffff;
 }
 
 .button_3d p {
@@ -124,7 +124,7 @@ p.tab_btn:first-child {
 }
 p.active.tab_btn {
   font-weight: 400;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #5ec9c5;
 }
 /* p.active.tab_btn_top {
   border-bottom: 2px solid #55ff00;
@@ -144,4 +144,54 @@ p.active.tab_btn_top {
   color: #fddf33;
   background: #e93f33;
   padding: 5px 0;
+}
+
+.dropbtn {
+  border: 1px solid #666;
+  padding: 0px 4px;
+  background: transparent;
+  color: #fff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 4px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+button:focus {
+  outline: none;
+  border-bottom: 2px solid #5ec9c5;
+}
+.active.dropdown button {
+  border-bottom: 2px solid #5ec9c5;
+  color: #5ec9c5;
 }
